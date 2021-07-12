@@ -1,0 +1,12 @@
+add_executable(double_pointer_test
+  double_pointer_test.cpp
+  ../slow_fast_pointer.cpp
+  ../left_right_pointer.cpp
+)
+target_link_libraries(double_pointer_test
+  ${GTEST_BOTH_LIBRARIES}
+  pthread
+)
+add_test(double_pointer_test
+  ${CMAKE_CURRENT_BINARY_DIR}/double_pointer_test
+)

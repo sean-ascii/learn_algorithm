@@ -1,0 +1,10 @@
+add_executable(stl_test
+  stl_test.cpp
+)
+target_link_libraries(stl_test
+  ${GTEST_BOTH_LIBRARIES}
+  pthread
+)
+add_test(stl_test
+  ${CMAKE_CURRENT_BINARY_DIR}/stl_test
+)

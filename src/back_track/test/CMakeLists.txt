@@ -1,0 +1,11 @@
+add_executable(back_track_test
+  back_track_test.cpp
+  ../back_track.cpp
+)
+target_link_libraries(back_track_test
+  ${GTEST_BOTH_LIBRARIES}
+  pthread
+)
+add_test(back_track_test
+  ${CMAKE_CURRENT_BINARY_DIR}/back_track_test
+)
